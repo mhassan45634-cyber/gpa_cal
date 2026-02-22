@@ -132,8 +132,8 @@
         margin-right: 0px;
         width: 100%;
         margin: 0px;
-        padding-left: 0px;
         margin-left: 0px;
+        padding-left: 0px;
         margin-top: 60px;
     }   
     .footer-content {
@@ -156,8 +156,8 @@
         font-size: 0.8rem;
     }
     .main-div{
-        margin-left: 12px;
-        margin-right: 12px;
+        margin-left: 16px;
+        margin-right: 16px;
     }
     .div-2 {
         padding: 10px;
@@ -179,3 +179,4 @@
     padding-bottom: 15px;
 
 }  
+
