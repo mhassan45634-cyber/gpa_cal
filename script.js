@@ -144,37 +144,6 @@ function openModal(){
             </div>
         </div>
     `;
-    if(results.subjectResults.length > 0){
-        resultHTML+=`
-            <div style="margin-top: 15px;">
-                <h4 style="margin: 0 0 10px 0; color: #333;">Subject Details</h4>
-                <table style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr style="background: #f0f0f0;">
-                            <th style="padding: 8px; text-align: left;">Subject</th>
-                            <th style="padding: 8px; text-align: center;">Credits</th>
-                            <th style="padding: 8px; text-align: center;">Marks</th>
-                            <th style="padding: 8px; text-align: center;">Points</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-        `;       
-        results.subjectResults.forEach(sub=>{
-            resultHTML+= `
-                <tr style="border-bottom: 1px solid #eee;">
-                    <td style="padding: 8px;">Subject ${sub.subject}</td>
-                    <td style="padding: 8px; text-align: center;">${sub.credits}</td>
-                    <td style="padding: 8px; text-align: center;">${sub.marks}</td>
-                    <td style="padding: 8px; text-align: center;">${sub.points}</td>
-                </tr>
-            `;
-        });       
-        resultHTML+=`
-                    </tbody>
-                </table>
-            </div>
-        `;
-    }
     document.getElementById('modalBody').innerHTML=resultHTML;
     document.getElementById('resultModal').style.display='block';
 }
