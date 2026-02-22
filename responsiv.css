@@ -132,6 +132,7 @@
         margin-right: 0px;
         width: 100%;
         margin: 0px;
+        padding-left: 0px;
         margin-left: 0px;
         margin-top: 60px;
     }   
@@ -176,4 +177,5 @@
 .footer-bottom {
     margin-bottom: 0;
     padding-bottom: 15px;
+
 }  
