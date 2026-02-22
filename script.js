@@ -144,8 +144,59 @@ function openModal(){
             </div>
         </div>
     `;
+    
     document.getElementById('modalBody').innerHTML=resultHTML;
     document.getElementById('resultModal').style.display='block';
+}
+function updateGP(subjectNumber) {
+    let marksInput = document.getElementById('m' + subjectNumber);
+    let gpDisplay = document.getElementById('gp' + subjectNumber);
+    
+    if (!marksInput || !gpDisplay) return;
+    
+    let marks = marksInput.value;
+    
+    if (marks && marks >= 0 && marks <= 100) {
+        let gradePoint = points(parseFloat(marks));
+        gpDisplay.textContent = gradePoint.toFixed(2);
+        
+        if (gradePoint >= 3.5) {
+            gpDisplay.style.backgroundColor = '#4CAF50';
+        } else if (gradePoint >= 2.5) {
+            gpDisplay.style.backgroundColor = '#FFC107';
+        } else if (gradePoint > 0) {
+            gpDisplay.style.backgroundColor = '#F44336';
+        } else {
+            gpDisplay.style.backgroundColor = '#9E9E9E';
+        }
+    } else {
+        gpDisplay.textContent = '0.00';
+        gpDisplay.style.backgroundColor = '#9E9E9E';
+    }
+}
+
+window.onload = function() {
+    for (let i = 1; i <= 8; i++) {
+        updateGP(i);
+    }
+};
+function updateAllGP() {
+    let totalPoints = 0;
+    let totalCredits = 0;
+    
+    for (let i = 1; i <= 8; i++) {
+        let marks = document.getElementById('m' + i).value;
+        let credits = document.getElementById('c' + i).value;
+        
+        if (marks && credits) {
+            let gp = points(parseFloat(marks));
+            totalPoints += gp * parseFloat(credits);
+            totalCredits += parseFloat(credits);
+        }
+    }
+    
+    let liveGPA = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : 0;
+    document.getElementById('live-gpa').textContent = liveGPA;
 }
 function closeModal(){
     document.getElementById('resultModal').style.display='none';
