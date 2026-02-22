@@ -15,43 +15,52 @@
             <nav>
                 <ul class="nav-menu">
                     <li><u>Subject No.</u></li>
-                    <li style="margin-left: 10px;"><u>Credit hours</u></li>
-                    <li style="margin-left: 65px;"><u>Marks</u></li>
+                    <li style="margin-left: 27px;"><u>Credit hours</u></li>
+                    <li style="margin-left: 72px;"><u>Marks</u></li>
+                    <li style="margin-left: 52px;"><u>GP</u></li>
                 </ul>
             </nav>
             <div class="div-3">
                 <div class="s1">Subject 1
-                    <input type="number" class="sub1" id="c1" placeholder="Credit Hours">
-                    <input type="number" class="sub1" id="m1" placeholder="Marks"><br>
-                </div>
-                <div class="s1">Subject 2
-                    <input type="number" class="sub1" id="c2" placeholder="Credit Hours">
-                    <input type="number" class="sub1" id="m2" placeholder="Marks"><br>
-                </div>
-                <div class="s1">Subject 3
-                    <input type="number" class="sub1" id="c3" placeholder="Credit Hours">
-                    <input type="number" class="sub1" id="m3" placeholder="Marks"><br>
-                </div>
-                <div class="s1">Subject 4
-                    <input type="number" class="sub1" id="c4" placeholder="Credit Hours">
-                    <input type="number" class="sub1" id="m4" placeholder="Marks"><br>
-                </div>
-                <div class="s1">Subject 5
-                    <input type="number" class="sub1" id="c5" placeholder="Credit Hours">
-                    <input type="number" class="sub1" id="m5" placeholder="Marks"><br>
-                </div>
-                <div class="s1">Subject 6
-                    <input type="number" class="sub1" id="c6" placeholder="Credit Hours">
-                    <input type="number" class="sub1" id="m6" placeholder="Marks"><br>
-                </div>
-                <div class="s1">Subject 7
-                    <input type="number" class="sub1" id="c7" placeholder="Credit Hours">
-                    <input type="number" class="sub1" id="m7" placeholder="Marks"><br>
-                </div>
-                <div class="s1">Subject 8
-                    <input type="number" class="sub1" id="c8" placeholder="Credit Hours">
-                    <input type="number" class="sub1" id="m8" placeholder="Marks"><br>
-                </div>
+    <input type="number" class="sub1" id="c1" placeholder="Credit Hours" oninput="updateGP(1)">
+    <input type="number" class="sub1" id="m1" placeholder="Marks" oninput="updateGP(1)"><br>
+    <span class="gp-display" id="gp1">0.00</span>  <!-- Changed from gp2 to gp1 -->
+</div>
+<div class="s1">Subject 2
+    <input type="number" class="sub1" id="c2" placeholder="Credit Hours" oninput="updateGP(2)">
+    <input type="number" class="sub1" id="m2" placeholder="Marks" oninput="updateGP(2)"><br>
+    <span class="gp-display" id="gp2">0.00</span>
+</div>
+<div class="s1">Subject 3
+    <input type="number" class="sub1" id="c3" placeholder="Credit Hours" oninput="updateGP(3)">
+    <input type="number" class="sub1" id="m3" placeholder="Marks" oninput="updateGP(3)"><br>
+    <span class="gp-display" id="gp3">0.00</span>
+</div>
+<div class="s1">Subject 4
+    <input type="number" class="sub1" id="c4" placeholder="Credit Hours" oninput="updateGP(4)">
+    <input type="number" class="sub1" id="m4" placeholder="Marks" oninput="updateGP(4)"><br>
+    <span class="gp-display" id="gp4">0.00</span>
+</div>
+<div class="s1">Subject 5
+    <input type="number" class="sub1" id="c5" placeholder="Credit Hours" oninput="updateGP(5)">
+    <input type="number" class="sub1" id="m5" placeholder="Marks" oninput="updateGP(5)"><br>
+    <span class="gp-display" id="gp5">0.00</span>
+</div>
+<div class="s1">Subject 6
+    <input type="number" class="sub1" id="c6" placeholder="Credit Hours" oninput="updateGP(6)">
+    <input type="number" class="sub1" id="m6" placeholder="Marks" oninput="updateGP(6)"><br>
+    <span class="gp-display" id="gp6">0.00</span>
+</div>
+<div class="s1">Subject 7
+    <input type="number" class="sub1" id="c7" placeholder="Credit Hours" oninput="updateGP(7)">
+    <input type="number" class="sub1" id="m7" placeholder="Marks" oninput="updateGP(7)"><br>
+    <span class="gp-display" id="gp7">0.00</span>
+</div>
+<div class="s1">Subject 8
+    <input type="number" class="sub1" id="c8" placeholder="Credit Hours" oninput="updateGP(8)">
+    <input type="number" class="sub1" id="m8" placeholder="Marks" oninput="updateGP(8)"><br>
+    <span class="gp-display" id="gp8">0.00</span>
+</div>
                 <button onclick="openModal()">Calculate</button>
             </div>
         </div>
@@ -99,7 +108,7 @@
         </div>       
     </div>   
     <div class="footer-bottom">
-        <p>STUDENTS OF DATA SCIENCE,BGNU</p>
+        <p>STUDENTS OF DATA SCIENCE, BGNU</p>
     </div>
 </footer>
     <script src="script.js"></script>
