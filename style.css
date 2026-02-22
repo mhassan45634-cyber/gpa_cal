@@ -17,26 +17,24 @@ h1{
     flex-direction: column;
     align-items: center;
     flex: 1 0 auto; 
+
 }
 .div-2{
     text-align: center;
-    border: 20px solid rgb(96, 86, 86);
-    border-radius: 20px;
-    border-width: 2px;
+    border: 2px solid rgb(245, 242, 242);
+    border-radius: 15px;
+    border-width: 1px;
     height: 750px;
     width: 600px;
     padding: 30px;
-    background-color: seashell;
-    box-shadow:rgb(178, 196, 186) 0px 10px 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow:rgb(246, 247, 247) 0px 10px 20px;
+    box-shadow:0 2px 9px 0 rgba(162, 153, 153, 0.6)
 }
 .div-3{
     padding: 0px;
     gap: 200px; 
     margin-top: 20px;   
-}
-.div-2:hover{
-     box-shadow:0 2px 9px 0 rgba(162, 153, 153, 0.6)
-     
 }
 .s1{
     height: 20px;
@@ -64,15 +62,6 @@ h1{
     font-style: italic;
     font-weight: bold;
     margin-left: 10px;
-}
-button{
-    font-size: 20px;
-    color: white;
-    width: 140px;
-    height: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: royalblue;
 }
 .sub1{
     width: 25%;
@@ -192,23 +181,33 @@ button{
     }
 }
 button {
-    transition: all .5s ease;
-    color: #fff;
-    border: 3px solid white;
-    font-family:'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    color: white;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     text-align: center;
-    line-height: 1;
-    font-size: 17px;
-    padding: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    padding: 10px 20px;
     outline: none;
-    border-radius: 20px;
-    color: #204d79;
-    background-color: #fff;
+    width: 180px;
+    height: 50px;
+    border-radius: 25px;  /* Pill shape */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
 button:hover {
-  background-color :rgb(202, 196, 196);
-   color: rgb(25, 23, 25) !important;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    color: white;
+}
+
+button:active {
+    transform: translateY(0);
 }
 .modal{
     display: none;
