@@ -131,6 +131,7 @@ h1{
 }
 .footer-section {
     flex: 1 1 250px;
+    font-weight: bold;
 }
 .footer-section h3 {
     color: #4CAF50;
@@ -149,7 +150,8 @@ h1{
 .highlight {
     color: #4CAF50;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-style: oblique;
 }
 .copyright {
     font-size: 0.9rem;
@@ -186,27 +188,10 @@ h1{
     text-decoration: none;
     transition: all 0.3s ease;
 }
-.social-icon {
-    font-size: 1.3rem;
-    min-width: 30px;
-}
 .social-link:hover {
     transform: translateX(10px);
     background: rgba(255,255,255,0.2);
     transform: translateY(-3px);
-}
-.social-link.facebook:hover {
-    background: #1877f2;
-}
-.social-link.instagram:hover {
-    background: #e4405f;
-    background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
-}
-.social-link.whatsapp:hover {
-    background: #25d366;
-}
-.social-link.github:hover {
-    background: #333;
 }
 .social-link i {
     font-size: 1.3rem;
