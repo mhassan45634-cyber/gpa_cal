@@ -123,28 +123,7 @@ function openModal(){
         return;
     }
     let resultHTML=`
-        <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 10px;">
-            <h4 style="margin: 0 0 15px 0; color: #333;">Summary</h4>
-            <div class="result-row" style="display: flex; justify-content: space-between; margin: 10px 0;">
-                <span>📚 Subjects Calculated:</span>
-                <strong>${results.totalSubjects}</strong>
-            </div>
-            <div class="result-row" style="display: flex; justify-content: space-between; margin: 10px 0;">
-                <span>⏱️ Total Credit Hours:</span>
-                <strong>${results.totalCredits}</strong>
-            </div>
-            <div class="result-row" style="display: flex; justify-content: space-between; margin: 10px 0;">
-                <span>📊 Total Grade Points:</span>
-                <strong>${results.totalPoints}</strong>
-            </div>
-            <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-top: 15px; text-align: center;">
-                <div style="font-size: 14px; color: #666;">Your GPA</div>
-                <div style="font-size: 36px; font-weight: bold; color: #4CAF50;">${results.gpa}</div>
-                <div style="font-size: 18px; color: #2196F3; margin-top: 5px;">Grade: ${results.grade}</div>
-            </div>
-        </div>
-    `;
-    
+    `;   
     document.getElementById('modalBody').innerHTML=resultHTML;
     document.getElementById('resultModal').style.display='block';
 }
@@ -174,11 +153,32 @@ function updateGP(subjectNumber) {
         gpDisplay.style.backgroundColor = '#9E9E9E';
     }
 }
-
+function updateHalfMeter() {
+    let totalPoints = 0;
+    let totalCredits = 0;
+    
+    for (let i = 1; i <= 8; i++) {
+        let marks = document.getElementById('m' + i).value;
+        let credits = document.getElementById('c' + i).value;
+        
+        if (marks && credits && marks > 0 && credits > 0) {
+            let gp = points(parseFloat(marks));
+            totalPoints += gp * parseFloat(credits);
+            totalCredits += parseFloat(credits);
+        }
+    } 
+    let gpa = totalCredits > 0 ? (totalPoints / totalCredits) : 0;
+    document.getElementById('halfGPA').textContent = gpa.toFixed(2);
+    let rotation = -90 + (gpa / 4) * 180;
+    document.getElementById('gpaHalfNeedle').style.transform = 
+        `translateX(-50%) rotate(${rotation}deg)`;
+}
 window.onload = function() {
     for (let i = 1; i <= 8; i++) {
         updateGP(i);
     }
+    updateHalfMeter();
+    updateTopSection();
 };
 function updateAllGP() {
     let totalPoints = 0;
@@ -193,13 +193,32 @@ function updateAllGP() {
             totalPoints += gp * parseFloat(credits);
             totalCredits += parseFloat(credits);
         }
-    }
-    
+    }  
     let liveGPA = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : 0;
     document.getElementById('live-gpa').textContent = liveGPA;
 }
 function closeModal(){
     document.getElementById('resultModal').style.display='none';
+}
+function updateTopSection() {
+    let totalPoints = 0;
+    let totalCredits = 0;
+    
+    for (let i = 1; i <= 8; i++) {
+        let marks = document.getElementById('m' + i).value;
+        let credits = document.getElementById('c' + i).value;       
+        if (marks && credits && marks > 0 && credits > 0) {
+            let gp = points(parseFloat(marks));
+            totalPoints += gp * parseFloat(credits);
+            totalCredits += parseFloat(credits);
+        }
+    }    
+    let gpa = totalCredits > 0 ? (totalPoints / totalCredits) : 0;
+    let percentage = (gpa / 4) * 100;
+    let grade = getLetterGrade(gpa);
+    document.getElementById('liveGPA').textContent = gpa.toFixed(2);
+    document.getElementById('livePercentage').textContent = percentage.toFixed(1) + '%';
+    document.getElementById('liveGrade').textContent = grade;
 }
 window.onclick=function(event){
     let modal=document.getElementById('resultModal');
