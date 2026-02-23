@@ -372,6 +372,7 @@
     
     .div-2 {
         padding: 10px;
+        margin-right: 1px !important;
     }   
     
     .nav-menu {
@@ -443,3 +444,4 @@
     margin-bottom: 0;
     padding-bottom: 15px;
 }  
+
