@@ -85,11 +85,10 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-        padding: 15px;
         height: auto;
         position: relative !important;
         height: 105px !important;  /* Fixed height for 3 lines */
-        padding: 10px !important;
+        padding: 5px !important;
         margin-bottom: 15px !important;
         background: snow !important;
         border-radius: 16px !important;
@@ -145,9 +144,10 @@
         padding-top: 0 !important;
     }
     .div-2 {
-        width: 95%;
-        padding: 15px;
+        width: 90%;
+        padding: 10px;
         height: auto;
+        margin-right: 20px;
     }  
     .main-div{
         margin-left: 16px;
@@ -207,8 +207,58 @@
         width: 65%;
         margin-left: 35px;
         margin-right: 35px;
-    } 
-       
+    }
+    .detail-sec{
+    width: 160px !important;
+    margin-top: 15px;
+    padding-right: 20px;
+    font-size: 16px;
+    padding-left: 1px;
+    width: 70px;
+}
+#det{
+    gap: 10px !important;
+    margin: 1px;
+    padding: 2px;
+}
+.result-div{
+    padding-top: 0% !important;
+    align-items: center ;
+    margin-top: 0% !important;
+    border-radius: 20px;
+    border: 0px solid black;
+    width: 330px;
+    height: 150px;
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow:0 5px 10px rgba(223, 217, 217, 0.5);
+    gap: 2px;  
+}
+ .half-meter {
+    padding-top: 2px;
+    width: 20px !important;
+    top: 20px !important;
+    bottom: 50px !important;
+    margin-left: 7px !important;
+}
+.half-reading{
+    bottom: 25px !important;
+    font-size: 12px !important;
+}
+.half-circle {
+    background: #546079;
+    border-radius: 250px 250px 0 0;
+    width: 130px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    border: 8px solid #4a5568;
+    border-bottom: none;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+    margin-right: 300px !important;
+    margin-top: 10px;
+}      
 }  
 @media screen and (max-width: 360px) {
     .s1 {
@@ -337,6 +387,57 @@
     h1 {
         font-size: 24px;
     }
+    .result-row span,
+    .result-row strong {
+        font-size: 13px !important;
+    }
+    .half-meter {
+    padding-top: 2px;
+    width: 20px !important;
+    top: 20px !important;
+    bottom: 50px !important;
+    margin-left: 7px !important;
+}
+.half-circle {
+    background: #546079;
+    border-radius: 250px 250px 0 0;
+    width: 130px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    border: 8px solid #4a5568;
+    border-bottom: none;
+    box-shadow: inset 0 10px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+    margin-right: 300px !important;
+    margin-top: 10px;
+}
+.result-div{
+    padding-top: 0% !important;
+    align-items: center ;
+    margin-top: 0% !important;
+    border-radius: 20px;
+    border: 0px solid black;
+    width: 330px;
+    height: 150px;
+    background-color: #a6eba0;
+    margin-bottom: 20px;
+    box-shadow:0 5px 10px rgba(223, 217, 217, 0.5);
+    gap: 2px;  
+}
+.detail-sec{
+    width: 160px !important;
+    margin-top: 15px;
+    padding-right: 20px;
+    font-size: 16px;
+    padding-left: 1px;
+    width: 70px;
+}
+#det{
+    gap: 10px !important;
+    margin: 1px;
+    padding: 2px;
+}
 }
 .footer-bottom {
     margin-bottom: 0;
