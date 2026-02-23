@@ -11,7 +11,35 @@
 <body>
     <div class="main-div">
         <u><h1>GPA CALCULATOR</h1></u>
-        <div class="div-2">
+        <div class="result-div">
+            <h4 class="resul"><u>YOUR RESULTS</u></h4>
+            <div class="half-meter">
+        <div class="half-circle">
+        <div class="half-face">
+            <div class="half-needle" id="gpaHalfNeedle"></div>
+            <div class="half-center"></div>
+            <div class="half-reading" id="halfGPA">0.00</div>
+        </div>
+        <div class="half-labels">
+            <span style="left: 0%;">0</span>
+            <span style="left: 12.5%;">0.5</span>
+            <span style="left: 25%;">1</span>
+            <span style="left: 37.5%;">1.5</span>
+            <span style="left: 50%;">2</span>
+            <span style="left: 62.5%;">2.5</span>
+            <span style="left: 75%;">3</span>
+            <span style="left: 87.5%;">3.5</span>
+            <span style="left: 100%;">4</span>
+        </div>
+    </div>
+    <div class="detail-sec">
+    <span class="detail-item">GPA: <span id="liveGPA">.00</span></span>
+    <span class="detail-item">Percentage: <span id="livePercentage">0%</span></span>
+    <span class="detail-item">Grade: <span id="liveGrade">F</span></span>
+</div>
+</div>
+            </div>
+        <div class="div-2">           
             <nav>
                 <ul class="nav-menu">
                     <li><u>Subject No.</u></li>
@@ -22,95 +50,81 @@
             </nav>
             <div class="div-3">
                 <div class="s1">Subject 1
-    <input type="number" class="sub1" id="c1" placeholder="Credit Hours" oninput="updateGP(1)">
-    <input type="number" class="sub1" id="m1" placeholder="Marks" oninput="updateGP(1)">
+    <input type="number" class="sub1" id="c1" placeholder="Credit Hours" oninput="if(this.value>4) this.value=4; if(this.value<0) this.value=0; updateGP(1); updateHalfMeter(); updateTopSection();">
+    <input type="number" class="sub1" id="m1" placeholder="Marks" oninput="if(this.value>100) this.value=100; updateGP(1); updateHalfMeter(); updateTopSection();">
     <span class="gp-display" id="gp1">0.00</span>  
 </div>
 <div class="s1">Subject 2
-    <input type="number" class="sub1" id="c2" placeholder="Credit Hours" oninput="updateGP(2)">
-    <input type="number" class="sub1" id="m2" placeholder="Marks" oninput="updateGP(2)">
+    <input type="number" class="sub1" id="c2" placeholder="Credit Hours" oninput="if(this.value>4) this.value=4; if(this.value<0) this.value=0; updateGP(2); updateHalfMeter(); updateTopSection();">
+    <input type="number" class="sub1" id="m2" placeholder="Marks" oninput="if(this.value>100) this.value=100; updateGP(2); updateHalfMeter(); updateTopSection();">
     <span class="gp-display" id="gp2">0.00</span>
 </div>
 <div class="s1">Subject 3
-    <input type="number" class="sub1" id="c3" placeholder="Credit Hours" oninput="updateGP(3)">
-    <input type="number" class="sub1" id="m3" placeholder="Marks" oninput="updateGP(3)">
+    <input type="number" class="sub1" id="c3" placeholder="Credit Hours" oninput="if(this.value>4) this.value=4; if(this.value<0) this.value=0; updateGP(3); updateHalfMeter(); updateTopSection();">
+    <input type="number" class="sub1" id="m3" placeholder="Marks" oninput="if(this.value>100) this.value=100; updateGP(3); updateHalfMeter(); updateTopSection();">
     <span class="gp-display" id="gp3">0.00</span>
 </div>
 <div class="s1">Subject 4
-    <input type="number" class="sub1" id="c4" placeholder="Credit Hours" oninput="updateGP(4)">
-    <input type="number" class="sub1" id="m4" placeholder="Marks" oninput="updateGP(4)">
+    <input type="number" class="sub1" id="c4" placeholder="Credit Hours" oninput="if(this.value>4) this.value=4; if(this.value<0) this.value=0; updateGP(4); updateHalfMeter(); updateTopSection();">
+    <input type="number" class="sub1" id="m4" placeholder="Marks" oninput="if(this.value>100) this.value=100; updateGP(4); updateHalfMeter(); updateTopSection();">
     <span class="gp-display" id="gp4">0.00</span>
 </div>
 <div class="s1">Subject 5
-    <input type="number" class="sub1" id="c5" placeholder="Credit Hours" oninput="updateGP(5)">
-    <input type="number" class="sub1" id="m5" placeholder="Marks" oninput="updateGP(5)">
+    <input type="number" class="sub1" id="c5" placeholder="Credit Hours" oninput="if(this.value>4) this.value=4; if(this.value<0) this.value=0; updateGP(5); updateHalfMeter(); updateTopSection();">
+    <input type="number" class="sub1" id="m5" placeholder="Marks" oninput="if(this.value>100) this.value=100; updateGP(5); updateHalfMeter(); updateTopSection();">
     <span class="gp-display" id="gp5">0.00</span>
 </div>
 <div class="s1">Subject 6
-    <input type="number" class="sub1" id="c6" placeholder="Credit Hours" oninput="updateGP(6)">
-    <input type="number" class="sub1" id="m6" placeholder="Marks" oninput="updateGP(6)">
+    <input type="number" class="sub1" id="c6" placeholder="Credit Hours" oninput="if(this.value>4) this.value=4; if(this.value<0) this.value=0; updateGP(6); updateHalfMeter(); updateTopSection();">
+    <input type="number" class="sub1" id="m6" placeholder="Marks" oninput="if(this.value>100) this.value=100; updateGP(6); updateHalfMeter(); updateTopSection();">
     <span class="gp-display" id="gp6">0.00</span>
 </div>
 <div class="s1">Subject 7
-    <input type="number" class="sub1" id="c7" placeholder="Credit Hours" oninput="updateGP(7)">
-    <input type="number" class="sub1" id="m7" placeholder="Marks" oninput="updateGP(7)">
+    <input type="number" class="sub1" id="c7" placeholder="Credit Hours" oninput="if(this.value>4) this.value=4; if(this.value<0) this.value=0; updateGP(7); updateHalfMeter(); updateTopSection();">
+    <input type="number" class="sub1" id="m7" placeholder="Marks" oninput="if(this.value>100) this.value=100; updateGP(7); updateHalfMeter(); updateTopSection();">
     <span class="gp-display" id="gp7">0.00</span>
 </div>
 <div class="s1">Subject 8
-    <input type="number" class="sub1" id="c8" placeholder="Credit Hours" oninput="updateGP(8)">
-    <input type="number" class="sub1" id="m8" placeholder="Marks" oninput="updateGP(8)">
+    <input type="number" class="sub1" id="c8" placeholder="Credit Hours" oninput="if(this.value>4) this.value=4; if(this.value<0) this.value=0; updateGP(8); updateHalfMeter(); updateTopSection();">
+    <input type="number" class="sub1" id="m8" placeholder="Marks" oninput="if(this.value>100) this.value=100; updateGP(8); updateHalfMeter(); updateTopSection();">
     <span class="gp-display" id="gp8">0.00</span>
 </div>
-                <button onclick="openModal()">Calculate</button>
             </div>
         </div>
     </div>
-    <div id="resultModal" class="modal">
-        <div class="modal-card">
-            <div class="modal-header">
-                <h3>📊 Your Results</h3>
-                <button class="modal-close" onclick="closeModal()">×</button>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section" id="footer-section-1">
+                <p>Effort by <span class="highlight"><u>Mr. Hassan</u></span></p>
+                <p>Effort by <span class="highlight"><u>Ali Hassan</u></span></p>
+                <p class="copyright">© 2026 All rights reserved.</p>
             </div>
-            <div class="modal-body" id="modalBody"></div>
-            <div class="modal-footer">
-                <button class="btn-ok" onclick="closeModal()">OK</button>
-            </div>
+            <div class="footer-section">
+                <h3>Connect with Me</h3>
+                <div class="social-links">
+                    <a href="https://facebook.com/mhassan.6" target="_blank" class="social-link facebook">
+                        <i class="bi bi-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://instagram.com/mhassan.6" target="_blank" class="social-link instagram">
+                        <i class="bi bi-instagram"></i>
+                        <span>Insta</span>
+                    </a>
+                    <a href="https://wa.me/+923107612528" target="_blank" class="social-link whatsapp">
+                        <i class="bi bi-whatsapp"></i>
+                        <span>WS</span>
+                    </a>
+                    <a href="https://github.com/mhassan45634-cyber" target="_blank" class="social-link github">
+                        <i class="bi bi-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>       
+        </div>   
+        <div class="footer-bottom">
+            <p>STUDENTS OF DATA SCIENCE, BGNU</p>
         </div>
-    </div>
-<footer class="footer">
-    
-    <div class="footer-content">
-        <div class="footer-section" id="footer-section-1">
-            <p>Effort by <span class="highlight"><u>Mr. Hassan</u></span></p>
-            <p>Effort by <span class="highlight"><u>Ali Hassan</u></span></p>
-            <p class="copyright">© 2026 All rights reserved.</p>
-        </div>
-        <div class="footer-section">
-            <h3>Connect with Me</h3>
-            <div class="social-links">
-                <a href="https://facebook.com/mhassan.6" target="_blank" class="social-link facebook">
-                    <i class="bi bi-facebook"></i>
-                    <span>Facebook</span>
-                </a>
-                <a href="https://instagram.com/mhassan.6" target="_blank" class="social-link instagram">
-                    <i class="bi bi-instagram"></i>
-                    <span>Insta</span>
-                </a>
-                <a href="https://wa.me/+923107612528" target="_blank" class="social-link whatsapp">
-                    <i class="bi bi-whatsapp"></i>
-                    <span>WS</span>
-                </a>
-                <a href="https://github.com/mhassan45634-cyber" target="_blank" class="social-link github">
-                    <i class="bi bi-github"></i>
-                    <span>GitHub</span>
-                </a>
-            </div>
-        </div>       
-    </div>   
-    <div class="footer-bottom">
-        <p>STUDENTS OF DATA SCIENCE, BGNU</p>
-    </div>
-</footer>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
