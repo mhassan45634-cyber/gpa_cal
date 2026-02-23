@@ -19,7 +19,7 @@
     color: #ecf0f1;
     margin: 10px 0;
     margin-left: 15px;
-}
+    }
     .footer-links {
         display: flex;
         flex-wrap: wrap;
@@ -54,15 +54,7 @@
         width: 22%;
         margin-left: 10px;
         margin-bottom: 0;
-    }  
-    .modal-card {
-        width: 90%;
-    }
-    
-    .popup-content {
-        width: 80%;
-        margin: 80px auto;
-    }
+    } 
     a{
         text-align: center;
         width: 65%;
@@ -183,21 +175,7 @@
         width: 100%;
         max-width: 200px;
         margin: 10px auto;
-    }   
-    .modal-card {
-        width: 95%;
-    }    
-    .modal-header {
-        padding: 15px;
-    }   
-    .modal-body {
-        padding: 15px;
-    }    
-    .popup-content {
-        width: 90%;
-        padding: 20px;
-        margin: 50px auto;
-    }   
+    }
     .result-row {
         flex-direction: column;
         gap: 5px;
@@ -321,20 +299,19 @@
         padding-top: 0 !important;
     }
     .footer {
-        padding: 30px 0 0 0;
+        padding: 20px 0 0 0;
         margin-right: 0px;
         width: 100%;
         margin: 0px;
         margin-left: 0px;
         padding-left: 0px;
         margin-top: 60px;
+        align-items: center !important;
     }   
-    
     .footer-content {
-        gap: 1px;
+        gap: 0px;
         padding-bottom: 0px;
     } 
-    
     #footer-section-1 {
         margin-bottom: 0px !important;
         padding-bottom: 0px !important;
@@ -344,16 +321,20 @@
     
     .footer-section {
         flex: 0 0 0px !important;
+        align-items: center !important;
     }
     
     .footer-section h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }   
-    
+    .footer-section p{
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
     .social-links {
-        align-items: center;
+        align-items: center !important;
+        gap: 10px;
     }  
-    
     a {
         text-align: center;
         width: 65%;
@@ -439,9 +420,12 @@
     margin: 1px;
     padding: 2px;
 }
+body{
+    margin-left: 0px;
+    width: 360px !important;
+}
 }
 .footer-bottom {
     margin-bottom: 0;
     padding-bottom: 15px;
 }  
-
