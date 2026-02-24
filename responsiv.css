@@ -431,20 +431,20 @@
     margin-top: 0% !important;
     border-radius: 20px;
     border: 0px solid black;
-    width: 330px;
-    height: 150px;
+    width: 350px !important;
+    height: 130px !important;
     background-color: #a6eba0;
     margin-bottom: 20px;
     box-shadow:0 5px 10px rgba(223, 217, 217, 0.5);
     gap: 2px;  
 }
 .detail-sec{
-    width: 155px !important;
+    width: 165px !important;
     margin-top: 15px;
     padding-right: 1px;
     font-size: 16px;
     padding-left: 2px;
-    width: 70px;
+    margin-bottom: 30px;
     left: 165px !important;
 }
 #det{
