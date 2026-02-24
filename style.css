@@ -10,6 +10,7 @@ body{
 }
 h1{
     text-align: center;
+    
 }
 .main-div{
     display: flex;
@@ -405,6 +406,13 @@ h1{
     width: 70px !important;
     height: 20px !important;
     margin-right: 4px !important;
+    color: #4100b1;
+}
+#liveGPA{
+    color: #4100b1;
+}
+#liveGrade{
+    color: #4100b1;
 }
 .detail-item{
     width: 20px !important;
