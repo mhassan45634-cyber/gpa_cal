@@ -61,12 +61,12 @@ function calGPA(){
     };
 }
 function getGrade(gpa){
-    gpa=parseFloat(gpa);
-    if(gpa>=3.95 && gpa<=4.00) return 'A+';
-    else if(gpa>=3.71 || gpa<=3.94) return 'A';
-    else if(gpa>=2.86 || gpa<=3.65) return 'B';
-    else if(gpa>=2.29 || gpa<=2.80) return 'C';
-    else if(gpa>=2.00 || gpa<=2.23) return 'D';
+    gpa = parseFloat(gpa);
+    if(gpa >= 3.95 && gpa <= 4.00) return 'A+';
+    else if(gpa >= 3.71 && gpa <= 3.94) return 'A';
+    else if(gpa >= 2.86 && gpa <= 3.70) return 'B'; 
+    else if(gpa >= 2.29 && gpa <= 2.85) return 'C';  
+    else if(gpa >= 2.00 && gpa <= 2.28) return 'D';  
     else if(gpa<2.00) return 'F';
 }
 function updateGP(subjectNumber) {
@@ -172,4 +172,5 @@ document.addEventListener('keypress',function(event){
         openModal();
     }
 });
+
 
