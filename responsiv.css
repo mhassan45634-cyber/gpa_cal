@@ -151,6 +151,7 @@
         padding-left: 0px;
         margin-top: 60px;
         align-items: center !important;
+        padding-top: 4px !important;
     }
     #footer-section-1 {
         margin-bottom: 0px !important;
@@ -162,6 +163,7 @@
         padding-bottom: 0px;
         gap: 0px;
     } 
+
     .main-div{
         margin-left: 16px;
         margin-right: 0px;
@@ -171,6 +173,7 @@
     }    
     .footer-section h3 {
         font-size: 1.1rem;
+        margin-top: 6px;
     }   
     .social-links {
         align-items: center;
@@ -235,6 +238,8 @@
     margin-bottom: 20px;
     box-shadow:0 5px 10px rgba(223, 217, 217, 0.5);
     gap: 2px;  
+    position: relative;
+    right: 8px;
 }
  .half-meter {
     padding-top: 2px;
@@ -271,8 +276,11 @@
     height: 20px !important;
 }
 .detail-item{
-    width: 20px !important;
-    
+    width: 20px !important;  
+}
+.copyright{
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
 }
 }  
 @media screen and (max-width: 360px) {
@@ -446,7 +454,10 @@
     background-color: #a6eba0;
     margin-bottom: 20px;
     box-shadow:0 5px 10px rgba(223, 217, 217, 0.5);
-    gap: 2px;  
+    gap: 2px; 
+    position: relative;
+    right: 8px !important; 
+    margin-left: 14px;
 }
 .detail-sec{
     width: 155px !important;
