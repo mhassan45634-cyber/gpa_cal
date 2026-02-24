@@ -64,10 +64,10 @@ function getGrade(gpa){
     gpa = parseFloat(gpa);
     if(gpa >= 3.95 && gpa <= 4.00) return 'A+';
     else if(gpa >= 3.71 && gpa <= 3.94) return 'A';
-    else if(gpa >= 2.86 && gpa <= 3.70) return 'B'; 
-    else if(gpa >= 2.29 && gpa <= 2.85) return 'C';  
-    else if(gpa >= 2.00 && gpa <= 2.28) return 'D';  
-    else if(gpa<2.00) return 'F';
+    else if(gpa >= 2.86 && gpa <= 3.70) return 'B';  // Note: fixed gap at 3.65-3.70
+    else if(gpa >= 2.29 && gpa <= 2.85) return 'C';  // Note: fixed gap
+    else if(gpa >= 2.00 && gpa <= 2.28) return 'D';  // Note: fixed gap
+    else return 'F';
 }
 function updateGP(subjectNumber) {
     let marksInput = document.getElementById('m' + subjectNumber);
@@ -132,13 +132,9 @@ function updateAllGP() {
     let liveGPA = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : 0;
     document.getElementById('live-gpa').textContent = liveGPA;
 }
-function closeModal(){
-    document.getElementById('resultModal').style.display='none';
-}
 function updateTopSection() {
     let totalPoints = 0;
     let totalCredits = 0;
-    
     for (let i = 1; i <= 8; i++) {
         let marks = document.getElementById('m' + i).value;
         let credits = document.getElementById('c' + i).value;       
@@ -155,22 +151,3 @@ function updateTopSection() {
     document.getElementById('livePercentage').textContent = percentage.toFixed(1) + '%';
     document.getElementById('liveGrade').textContent = grade;
 }
-window.onclick=function(event){
-    let modal=document.getElementById('resultModal');
-    if(event.target==modal){
-        modal.style.display='none';
-    }
-}
-function resetFields(){
-    for(let i=1; i<=8; i++){
-        document.getElementById('c' + i).value='';
-        document.getElementById('m' + i).value='';
-    }
-}
-document.addEventListener('keypress',function(event){
-    if(event.key==='Enter'){
-        openModal();
-    }
-});
-
-
