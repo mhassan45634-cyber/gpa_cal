@@ -90,8 +90,7 @@ function updateGP(subjectNumber) {
         gpDisplay.textContent = '0.00';
         gpDisplay.style.backgroundColor = '#9E9E9E';
     }
-}
-function updateHalfMeter() {
+}function updateHalfMeter() {
     let totalPoints = 0;
     let totalCredits = 0;  
     for (let i = 1; i <= 8; i++) {
@@ -105,9 +104,21 @@ function updateHalfMeter() {
     } 
     let gpa = totalCredits > 0 ? (totalPoints / totalCredits) : 0;
     document.getElementById('halfGPA').textContent = gpa.toFixed(2);
-    let rotation = -90 + (gpa / 4) * 180;
-    document.getElementById('gpaHalfNeedle').style.transform = 
-        `translateX(-50%) rotate(${rotation}deg)`;
+    let targetRotation = -90 + (gpa / 4) * 180;
+    let needle = document.getElementById('gpaHalfNeedle');
+    let currentRotation = -90;
+    function step() {
+        if (currentRotation < targetRotation) {
+            currentRotation += 2;
+            needle.style.transform = `translateX(-50%) rotate(${currentRotation}deg)`;
+            setTimeout(step, 7);
+        } else if (currentRotation > targetRotation) {
+            currentRotation -= 2;
+            needle.style.transform = `translateX(-50%) rotate(${currentRotation}deg)`;
+            setTimeout(step, 7);
+        }
+    }
+    step();
 }
 window.onload = function() {
     for (let i = 1; i <= 8; i++) {
