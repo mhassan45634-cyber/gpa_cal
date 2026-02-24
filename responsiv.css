@@ -133,7 +133,7 @@
         right: auto !important;
         top: auto !important;
         margin-top: 0 !important;
-        padding-top: 0 !important;
+        padding-top: 2px !important;
     }
     .div-2 {
         width: 90%;
@@ -303,7 +303,7 @@
     }
     .gp-display {
         position: absolute !important;
-        bottom: 14px !important;
+        bottom: 12px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 60px !important;
@@ -323,7 +323,7 @@
         right: auto !important;
         top: auto !important;
         margin-top: 0 !important;
-        padding-top: 0 !important;
+        padding-top: 2px !important;
     }
     .footer {
         padding: 20px 0 0 0;
@@ -407,10 +407,13 @@
     bottom: 50px !important;
     margin-left: 7px !important;
 }
+.half-needle{
+    height: 55px;
+}
 .half-circle {
     background: #546079;
     border-radius: 250px 250px 0 0;
-    width: 130px;
+    width: 115px;
     height: 60px;
     margin: 0 auto;
     position: relative;
@@ -441,6 +444,7 @@
     font-size: 16px;
     padding-left: 2px;
     width: 70px;
+    left: 165px !important;
 }
 #det{
     gap: 10px !important;
