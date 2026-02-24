@@ -324,6 +324,7 @@
         top: auto !important;
         margin-top: 0 !important;
         padding-top: 2px !important;
+        box-shadow: 0px 6px 6px rgba(21, 21, 21, 0.1);
     }
     .footer {
         padding: 20px 0 0 0;
