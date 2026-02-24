@@ -140,10 +140,30 @@
         padding: 10px;
         height: auto;
         margin-right: 20px;
-    }  
+    } 
+    .footer{
+        
+        padding: 20px 0 0 0;
+        margin-right: 0px;
+        width: 100%;
+        margin: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-top: 60px;
+        align-items: center !important;
+    }
+    #footer-section-1 {
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+        gap: 0px !important;
+        margin-top: 3px !important;
+    }
+    .footer-content{
+        padding-bottom: 0px;
+    } 
     .main-div{
         margin-left: 16px;
-        margin-right: 16px;
+        margin-right: 0px;
     }  
     .footer {
         padding: 30px 0 0 0;
@@ -153,9 +173,12 @@
     }   
     .social-links {
         align-items: center;
+        gap: 10px;
     }   
     .footer-bottom p {
         font-size: 0.8rem;
+        margin-top: 1px !important;
+        margin-bottom: 1px !important;
     }
      #footer-section-1 {
         margin-bottom: 0px !important;
@@ -187,9 +210,9 @@
         margin-right: 35px;
     }
     .detail-sec{
-    width: 160px !important;
+    width: 155px !important;
     margin-top: 15px;
-    padding-right: 20px;
+    padding-right: 1px;
     font-size: 16px;
     padding-left: 1px;
     width: 70px;
@@ -236,7 +259,11 @@
     overflow: hidden;
     margin-right: 300px !important;
     margin-top: 10px;
-}      
+}     
+.footer-bottom{
+    padding-bottom: 10px;
+    margin-top: 10px;
+} 
 }  
 @media screen and (max-width: 360px) {
     .s1 {
@@ -408,11 +435,11 @@
     gap: 2px;  
 }
 .detail-sec{
-    width: 160px !important;
+    width: 155px !important;
     margin-top: 15px;
-    padding-right: 20px;
+    padding-right: 1px;
     font-size: 16px;
-    padding-left: 1px;
+    padding-left: 2px;
     width: 70px;
 }
 #det{
@@ -423,6 +450,10 @@
 body{
     margin-left: 0px;
     width: 360px !important;
+}
+.footer-bottom{
+    padding-bottom: 10px;
+    margin-top: 10px;
 }
 }
 .footer-bottom {
