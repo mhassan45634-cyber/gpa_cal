@@ -282,6 +282,9 @@
     margin-bottom: 0px !important;
     margin-top: 0px !important;
 }
+h1{
+    font-size: 40px !important;
+}
 }  
 @media screen and (max-width: 360px) {
     .s1 {
