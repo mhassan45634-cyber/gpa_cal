@@ -114,7 +114,7 @@
     }
     .gp-display {
         position: absolute !important;
-        bottom: 14px !important;
+        bottom: 8px !important;
         transform: translateX(-50%) !important;
         width: 60px !important;
         min-width: 60px !important;
@@ -230,7 +230,7 @@
     border: 0px solid black;
     width: 330px;
     height: 150px;
-    background-color: #ffffff;
+    background-color: #7df49f;
     margin-bottom: 20px;
     box-shadow:0 5px 10px rgba(223, 217, 217, 0.5);
     gap: 2px;  
