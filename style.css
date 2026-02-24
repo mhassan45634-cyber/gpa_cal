@@ -72,7 +72,7 @@ h1{
     width: 20%;
     text-align: center;
     height: 30px;
-    border: 1px solid rgb(115, 110, 110);
+    border: 1px solid rgb(47, 0, 255);
     margin-left: 45px;
     border-radius: 10px;
     margin-top: 12px;
@@ -131,7 +131,6 @@ h1{
 }
 .footer-section {
     flex: 1 1 250px;
-    font-weight: bold;
 }
 .footer-section h3 {
     color: #4CAF50;
@@ -149,12 +148,11 @@ h1{
 }
 .highlight {
     color: #4CAF50;
-    font-weight: bold;
     font-size: 1.4rem;
     font-style: oblique;
 }
 .copyright {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: #bdc3c7;
 }
 .social-links {
@@ -262,9 +260,10 @@ h1{
     margin-top: 0px !important;
     padding-top: 0px !important;
     margin-bottom: 0px !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 5px !important;
     padding-left: 20px;
     padding-top: 10px;
+    font-size: 20px;
     margin-top: 5px !important;
     align-items: center !important;
     text-align: center !important;
@@ -327,7 +326,7 @@ h1{
 .half-needle {
     position: absolute;
     width: 2px;
-    height: 65px;
+    height: 60px;
     background: linear-gradient(to top, #f1c40f, #e67e22);
     left: 50%;
     bottom: 0;
