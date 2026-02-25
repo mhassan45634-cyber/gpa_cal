@@ -10,7 +10,10 @@ body{
 }
 h1{
     text-align: center;
-    
+    background: linear-gradient(135deg, #0d2c7a, #11924d) !important;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }
 .main-div{
     display: flex;
@@ -425,5 +428,6 @@ h1{
     width: 20px !important;
     
 }
+
 
 
