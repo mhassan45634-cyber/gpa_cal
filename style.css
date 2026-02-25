@@ -531,43 +531,6 @@ h1{
     border-radius: 20px;
     border: 1px solid #4CAF50;
 }
-@media screen and (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .uni-name {
-        font-size: 2.5rem;
-    }
-    
-    .dept-name {
-        border-left: none;
-        border-top: 2px solid #4CAF50;
-        padding-top: 10px;
-        padding-left: 0;
-    }
-    
-    .policy-badge {
-        transform: none;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    .uni-name {
-        font-size: 2.4rem;
-    }
-    
-    .dept-name {
-        font-size: 1rem;
-    }
-    
-    .policy-badge {
-        padding: 10px 15px;
-    }
-    
-    .policy-badge p {
-        font-size: 0.8rem;
-    }
-}
+
 
