@@ -537,6 +537,13 @@ body{
 .policy-badge p{
     font-size: 0.6rem;
 }
+.university-header{
+    width: 300px;
+    margin-left: 0px !important;
+}
+.university-header::before{
+    right: 0px;
+}
 }
 .footer-bottom {
     margin-bottom: 0;
