@@ -523,7 +523,7 @@ h1{
     padding-left: 2px;
     width: 70px;
     left: 165px !important;
-    height: 60px !important;
+    height: fit-content !important;
 }
 #det{
     gap: 10px !important;
