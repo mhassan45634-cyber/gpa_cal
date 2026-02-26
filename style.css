@@ -24,7 +24,7 @@ h1{
 }
 .div-2{
     text-align: center;
-    border: 2px solid rgb(245, 242, 242);
+    border: 2px solid rgb(242, 242, 245);
     border-radius: 15px;
     border-width: 1px;
     height: 700px;
@@ -306,7 +306,6 @@ h1{
 .detail-sec{
     margin-top: 0px;
     width: 210px !important;
-    height: 100px;
     gap: 10px;
     margin-bottom: 30px !important;
     padding-bottom: 0px !important;
@@ -314,6 +313,7 @@ h1{
     position:  relative !important;
     padding-left: 50px;
     bottom: 80px !important;
+    height: fit-content;
 }
 #det{
     margin: 0px !important;
@@ -508,6 +508,4 @@ h1{
     border-radius: 20px;
     border: 1px solid #4CAF50;
 }
-
-
 
