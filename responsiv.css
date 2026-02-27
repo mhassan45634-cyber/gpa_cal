@@ -522,8 +522,7 @@ h1{
     font-size: 16px;
     padding-left: 2px;
     width: 70px;
-    left: 165px !important;
-    height: fit-content !important;
+    left: 153px !important;
 }
 #det{
     gap: 10px !important;
@@ -553,3 +552,4 @@ body{
     margin-bottom: 0;
     padding-bottom: 15px;
 }  
+
