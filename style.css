@@ -73,6 +73,11 @@ h1{
     font-weight: bold;
     margin-left: 10px;
 }
+select{
+    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 .sub1{
     width: 20%;
     text-align: center;
@@ -508,4 +513,5 @@ h1{
     border-radius: 20px;
     border: 1px solid #4CAF50;
 }
+
 
