@@ -217,17 +217,18 @@
     }
     #fb1{
         position: relative;
-        bottom: -35px;
+        bottom: -36px;
         left: 190px;
     }
     #ws1{
         position: relative;
-        bottom: 14px;
+        bottom: 15px;
         left: 255px;
     }
     #git1{
+        display: none;
         position: relative;
-        bottom: 64px;
+        bottom: 65px;
         left: 320px;
     }
     .footer-section h3{
@@ -597,7 +598,7 @@ body{
     padding-bottom: 10px;
     margin-top: 0px;
     position: relative;
-    bottom: -141px;
+    bottom: -145px;
 }
 .policy-badge p{
     font-size: 0.6rem;
@@ -610,11 +611,11 @@ body{
     right: 0px;
 }
 .fb, .ws, .git{
-        display: none !important;
+    display: none !important;
     }
     #fb1{
         position: relative;
-        bottom: -37px;
+        bottom: -38px;
         left: 145px;
     }
     #ws1{
