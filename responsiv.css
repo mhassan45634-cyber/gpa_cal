@@ -340,6 +340,7 @@
     margin-top: 10px;
 }     
 .footer-bottom{
+    font-size: 0.8rem;
     padding-bottom: 10px;
     margin-top: 0px;
     position: relative;
@@ -376,6 +377,9 @@ h1{
     }
     .university-header::before{
     right: 0px;
+}
+.header-content{
+    gap: 10px;
 }
 }  
 @media screen and (max-width: 360px) {
@@ -623,6 +627,9 @@ body{
         bottom: 62px;
         left: 255px;
     }
+    .header-content{
+    gap: 10px;
+}
 }
 .footer-bottom {
     margin-bottom: 0;
