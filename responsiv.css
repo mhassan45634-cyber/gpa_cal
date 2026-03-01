@@ -217,17 +217,17 @@
     }
     #fb1{
         position: relative;
-        bottom: -37px;
+        bottom: -35px;
         left: 190px;
     }
     #ws1{
         position: relative;
-        bottom: 12px;
+        bottom: 14px;
         left: 255px;
     }
     #git1{
         position: relative;
-        bottom: 62px;
+        bottom: 64px;
         left: 320px;
     }
     .footer-section h3{
@@ -236,7 +236,7 @@
         margin-bottom: 10px;
         width: 170px;
         position: relative;
-        bottom: -84px;
+        bottom: -79px;
         left: 50px;
         
     }
