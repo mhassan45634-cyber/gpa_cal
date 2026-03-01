@@ -4,7 +4,6 @@
         text-align: center;
     }   
     .social-link {
-        width: 100%;
         justify-content: center;
     }   
     .social-link:hover {
@@ -58,8 +57,6 @@
     a{
         text-align: center;
         width: 65%;
-        margin-left: 35px;
-        margin-right: 35px;
     } 
     .nav-menu{
         padding: 10px !important;
@@ -93,6 +90,9 @@
         margin-left: 0;
         display: none;
     }   
+    .div-2{
+    border: 1px solid rgb(255, 255, 255);
+    }
     .nav-menu li {
         padding: 5px;
     }    
@@ -184,6 +184,8 @@
     .footer-content{
         padding-bottom: 0px;
         gap: 0px;
+        position: relative;
+        bottom: -10px;
     } 
 
     .main-div{
@@ -192,15 +194,56 @@
     }  
     .footer {
         padding: 30px 0 0 0;
+        height: 220px !important;
     }    
     .footer-section h3 {
         font-size: 1.1rem;
         margin-top: 6px;
     }   
     .social-links {
+        width: 0%;
         align-items: center;
         gap: 10px;
+        border: none !important;
+        flex-direction: row !important;
     }   
+    .fb, .ws, .git{
+        display: none !important;
+    }
+
+    .social-link facebook{
+        border: none !important;
+        width: 10px;
+    }
+    #fb1{
+        position: relative;
+        bottom: -37px;
+        left: 190px;
+    }
+    #ws1{
+        position: relative;
+        bottom: 12px;
+        left: 255px;
+    }
+    #git1{
+        position: relative;
+        bottom: 62px;
+        left: 320px;
+    }
+    .footer-section h3{
+        margin-top: 20px;
+        border-bottom: 0px;
+        margin-bottom: 10px;
+        width: 170px;
+        position: relative;
+        bottom: -84px;
+        left: 50px;
+        
+    }
+    .social-link{
+        border: 0px;
+    }
+    
     .footer-bottom p {
         font-size: 0.8rem;
         margin-top: 1px !important;
@@ -214,6 +257,7 @@
     }
     .footer-section{
         flex: 0 0 0px !important;
+        height: 33px;
     }
     .sub1 {
         width: 100%;
@@ -233,7 +277,6 @@
         text-align: center;
         width: 65%;
         margin-left: 35px;
-        margin-right: 35px;
     }
     .detail-sec{
     width: 155px !important;
@@ -298,9 +341,10 @@
 }     
 .footer-bottom{
     padding-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
+    position: relative;
+    bottom: -118px;
 } 
-
 #livePercentage{
     width: 10px !important;
     height: 20px !important;
@@ -421,11 +465,21 @@ h1{
     .footer-section {
         flex: 0 0 0px !important;
         align-items: center !important;
+        height: 13px;
     }
     
     .footer-section h3 {
         font-size: 1.2rem;
-    }   
+        margin-top: 20px;
+        border-bottom: 0px;
+        margin-bottom: 10px;
+        width: 170px;
+        position: relative;
+        bottom: -84px;
+        left: 10px;
+        
+    }
+      
     .footer-section p{
         margin-top: 1px;
         margin-bottom: 1px;
@@ -500,7 +554,6 @@ h1{
     border: 0px solid black;
     width: 330px;
     height: 130px !important;
-    background-color: #95fe8c;
     margin-bottom: 20px;
     box-shadow:0 1px 1px rgba(0,0,0,0.08),
         0 2px 2px rgba(0,0,0,0.08),
@@ -522,7 +575,7 @@ h1{
     font-size: 16px;
     padding-left: 2px;
     width: 70px;
-    left: 153px !important;
+    left: 155px !important;
 }
 #det{
     gap: 10px !important;
@@ -533,9 +586,14 @@ body{
     margin-left: 0px;
     width: 360px !important;
 }
+.div-2{
+    border: 1px solid rgb(255, 255, 255);
+    }
 .footer-bottom{
     padding-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 0px;
+    position: relative;
+    bottom: -141px;
 }
 .policy-badge p{
     font-size: 0.6rem;
@@ -547,9 +605,26 @@ body{
 .university-header::before{
     right: 0px;
 }
+.fb, .ws, .git{
+        display: none !important;
+    }
+    #fb1{
+        position: relative;
+        bottom: -37px;
+        left: 145px;
+    }
+    #ws1{
+        position: relative;
+        bottom: 12px;
+        left: 200px;
+    }
+    #git1{
+        position: relative;
+        bottom: 62px;
+        left: 255px;
+    }
 }
 .footer-bottom {
     margin-bottom: 0;
     padding-bottom: 15px;
 }  
-
