@@ -1,3 +1,4 @@
+
 body{
     background-color: rgb(225, 240, 240);
     font-size: 141%;
@@ -24,7 +25,7 @@ h1{
 }
 .div-2{
     text-align: center;
-    border: 2px solid rgb(242, 242, 245);
+    border: 3px solid rgb(0, 0, 255);
     border-radius: 15px;
     border-width: 1px;
     height: 700px;
@@ -34,6 +35,11 @@ h1{
     box-shadow:rgb(246, 247, 247) 0px 10px 20px;
     box-shadow:0 2px 9px 0 rgba(162, 153, 153, 0.6)
 }
+select{
+    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 .div-3{
     padding: 0px;
     gap: 200px; 
@@ -42,7 +48,7 @@ h1{
 .s1{
     height: 20px;
     text-align: left;
-    border: 1px solid rgb(243, 241, 241);
+    border: 1px solid rgb(241, 241, 243);
     border-radius: 16px;
     padding: 20px; 
     gap: 23px;
@@ -72,11 +78,6 @@ h1{
     font-style: italic;
     font-weight: bold;
     margin-left: 10px;
-}
-select{
-    appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 .sub1{
     width: 20%;
@@ -168,7 +169,6 @@ select{
     display: flex;
     flex-direction: row;
     gap: 15px;
-    margin-top: 15px;
     flex-wrap: wrap;
 }
 .social-link {
@@ -266,11 +266,11 @@ select{
     margin-top: 0px !important;
     padding-top: 0px !important;
     margin-bottom: 0px !important;
-    padding-bottom: 5px !important;
+    padding-bottom: 3px !important;
     padding-left: 20px;
     padding-top: 10px;
-    font-size: 20px;
-    margin-top: 5px !important;
+    font-size: 22px;
+    margin-top: 7px !important;
     align-items: center !important;
     text-align: center !important;
 }
@@ -314,7 +314,7 @@ select{
     gap: 10px;
     margin-bottom: 30px !important;
     padding-bottom: 0px !important;
-    left: 180px !important;
+    left: 170px !important;
     position:  relative !important;
     padding-left: 50px;
     bottom: 80px !important;
@@ -326,7 +326,7 @@ select{
 .detail-item{
     gap: 10px !important;
     font-weight: bold;
-    color: #0c7a10;
+    color: #006303;
     margin-right: 10px !important;
 }
 .half-face{
@@ -465,14 +465,16 @@ select{
     font-size: 2.8rem;
     font-weight: 900;
     margin: 0;
-    color: #000000;
+    color: #ffffff;
     letter-spacing: 2px;
+    font-family: 'League Spartan';
     transform: perspective(500px) rotateX(2deg);
+    -webkit-text-stroke: 1px rgb(222, 222, 222);
 }
 
 .dept-name {
     font-size: 1.3rem;
-    color: #ecf0f1;
+    color: #f3ff11;
     margin: 5px 0 0 0;
     font-style: italic;
     text-shadow: 
@@ -513,5 +515,4 @@ select{
     border-radius: 20px;
     border: 1px solid #4CAF50;
 }
-
 
