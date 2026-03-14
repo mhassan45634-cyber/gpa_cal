@@ -1,5 +1,5 @@
-function points(marks) {
-    marks = Math.floor(marks);
+function points(marks){
+    marks=Math.floor(marks);
     if(marks>=85 && marks<=100){
         return 4.0;
     }else{
@@ -31,22 +31,21 @@ function calGPA(){
     let totalCredits=0;
     
     for(let i=1; i<=8; i++){
-        let credits = document.getElementById('c' + i).value;
-        let marks = document.getElementById('m' + i).value;
-        marks = Math.floor(marks);
+        let credits=document.getElementById('c' + i).value;
+        let marks=document.getElementById('m' + i).value;
+        marks=Math.floor(marks);
         if(credits && marks){
             credits=parseFloat(credits);
             marks=parseFloat(marks);
             if(marks>=0 && marks<=100){
-                let gradePoint = points(marks);
-                totalCreditPoints += credits * gradePoint;
+                let gradePoint=points(marks);
+                totalCreditPoints += credits*gradePoint;
                 totalCredits += credits;
             }
         }
-    }  
-    
-    let gpa = totalCredits > 0 ? (totalCreditPoints / totalCredits) : 0;
-    return {
+    }     
+    let gpa=totalCredits>0 ? (totalCreditPoints/totalCredits):0;
+    return{
         gpa: gpa.toFixed(2),
         grade: getGrade(gpa),
         totalCredits: totalCredits,
@@ -55,33 +54,32 @@ function calGPA(){
 }
 
 function getGrade(gpa){
-    gpa = parseFloat(gpa);
-    if(gpa >= 3.95 && gpa <= 4.00) return 'A+';
-    else if(gpa >= 3.71 && gpa <= 3.94) return 'A';
-    else if(gpa >= 2.86 && gpa <= 3.70) return 'B'; 
-    else if(gpa >= 2.29 && gpa <= 2.85) return 'C';  
-    else if(gpa >= 2.00 && gpa <= 2.28) return 'D';  
+    gpa=parseFloat(gpa);
+    if(gpa>=3.95 && gpa <=4.00) return 'A+';
+    else if(gpa>=3.71 && gpa<=3.94) return 'A';
+    else if(gpa>=2.86 && gpa<=3.70) return 'B'; 
+    else if(gpa>=2.29 && gpa<=2.85) return 'C';  
+    else if(gpa>=2.00 && gpa<=2.28) return 'D';  
     else return 'F';
 }
 
-function updateGP(subjectNumber) {
-    let marksInput = document.getElementById('m' + subjectNumber);
-    let gpDisplay = document.getElementById('gp' + subjectNumber);   
-    if (!marksInput || !gpDisplay) return;    
-    let marks = marksInput.value; 
+function updateGP(subjectNumber){
+    let marksInput=document.getElementById('m' + subjectNumber);
+    let gpDisplay=document.getElementById('gp' + subjectNumber);   
+    if(!marksInput || !gpDisplay) return;    
+    let marks=marksInput.value; 
     marks=Math.floor(marks);   
-    if (marks && marks >= 0 && marks <= 100) {
-        let gradePoint = points(parseFloat(marks));
-        gpDisplay.textContent = gradePoint.toFixed(2);              
-    } else {
-        gpDisplay.textContent = '0.00';
+    if(marks && marks>=0 && marks<=100){
+        let gradePoint=points(parseFloat(marks));
+        gpDisplay.textContent=gradePoint.toFixed(2);              
+    }else{
+        gpDisplay.textContent='0.00';
     }
 }
 
 function updateHalfMeter() {
     let results = calGPA(); 
     let gpa = parseFloat(results.gpa);
-    
     document.getElementById('halfGPA').textContent = results.gpa;
     let targetRotation = -90 + (gpa / 4) * 180;
     let needle = document.getElementById('gpaHalfNeedle');
@@ -101,18 +99,18 @@ function updateHalfMeter() {
     step();
 }
 
-function updateTopSection() {
-    let results = calGPA(); 
-    let gpa = parseFloat(results.gpa);
-    let percentage = (gpa / 4) * 100;
+function updateTopSection(){
+    let results=calGPA(); 
+    let gpa=parseFloat(results.gpa);
+    let percentage=(gpa/4)*100;
     
     document.getElementById('liveGPA').textContent = results.gpa;
     document.getElementById('livePercentage').textContent = percentage.toFixed(1) + '%';
     document.getElementById('liveGrade').textContent = results.grade;
 }
 
-window.onload = function() {
-    for (let i = 1; i <= 8; i++) {
+window.onload=function(){
+    for(let i=1; i<=8; i++){
         updateGP(i);
     }
     updateHalfMeter();
