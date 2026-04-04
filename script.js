@@ -55,12 +55,14 @@ function calGPA(){
 
 function getGrade(gpa){
     gpa=parseFloat(gpa);
-    if(gpa>=3.95 && gpa <=4.00) return 'A+';
+    gpa=parseFloat(gpa.toFixed(2));
+    
+    if(gpa>=3.95 && gpa<=4.00) return 'A+';
     else if(gpa>=3.71 && gpa<=3.94) return 'A';
     else if(gpa>=2.86 && gpa<=3.70) return 'B'; 
     else if(gpa>=2.29 && gpa<=2.85) return 'C';  
     else if(gpa>=2.00 && gpa<=2.28) return 'D';  
-    else return 'F';
+    else if(gpa<2) return 'F';
 }
 
 function updateGP(subjectNumber){
