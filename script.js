@@ -29,6 +29,8 @@ function points(marks){
 function calGPA(){
     let totalCreditPoints=0;
     let totalCredits=0;
+    let totalmarks=0;
+    let totalsub=0;
     
     for(let i=1; i<=8; i++){
         let credits=document.getElementById('c' + i).value;
@@ -38,9 +40,11 @@ function calGPA(){
             credits=parseFloat(credits);
             marks=parseFloat(marks);
             if(marks>=0 && marks<=100){
+                totalsub++;
                 let gradePoint=points(marks);
                 totalCreditPoints += credits*gradePoint;
                 totalCredits += credits;
+                totalmarks+=marks;
             }
         }
     }     
@@ -49,6 +53,8 @@ function calGPA(){
         gpa: gpa.toFixed(2),
         grade: getGrade(gpa),
         totalCredits: totalCredits,
+        totalmarks:totalmarks,
+        totalsub:totalsub,
         totalPoints: totalCreditPoints.toFixed(2)
     };
 }
@@ -104,10 +110,15 @@ function updateHalfMeter() {
 function updateTopSection(){
     let results=calGPA(); 
     let gpa=parseFloat(results.gpa);
-    let percentage=(gpa/4)*100;
-    
+    let sub=parseFloat(results.totalsub);
+    let obt_marks=parseFloat(results.totalmarks);
+    let percentage=((obt_marks/(sub*100)))*100;
+    if(percentage){
+        document.getElementById('livePercentage').textContent = percentage.toFixed(1) + '%';
+    }else{
+        document.getElementById('livePercentage').textContent = 0.0+ '%';
+    }
     document.getElementById('liveGPA').textContent = results.gpa;
-    document.getElementById('livePercentage').textContent = percentage.toFixed(1) + '%';
     document.getElementById('liveGrade').textContent = results.grade;
 }
 
