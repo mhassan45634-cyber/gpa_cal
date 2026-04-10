@@ -362,7 +362,8 @@ h1{
     font-size: 30px !important;
 }
 .uni-name {
-        font-size: 2rem;
+        font-size: 2.6rem;
+        width: 370px;
     }
     
     .dept-name {
@@ -608,7 +609,8 @@ body{
     margin-left: 0px !important;
 }
 .uni-name{
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
+    width: 310px;
 }
 .university-header::before{
     right: 0px;
