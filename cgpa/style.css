@@ -277,7 +277,7 @@ select{
 .result-div{
     padding-top: 0% !important;
     align-items: center ;
-    margin-top: 21px !important;
+    margin-top: 0px !important;
     border-radius: 20px;
     border: 0px solid black;
     width: 480px;
