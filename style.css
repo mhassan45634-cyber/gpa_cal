@@ -1,13 +1,13 @@
 body{
     margin: 0px;
     padding: 0px;
-    padding-top: 5px;
+    padding-top: 6px;
     padding-bottom: 8px;
     background-color: rgb(149, 253, 253);
 }
 h1{
     text-align: center;
-    font-size: 3.8rem;
+    font-size: 4rem;
     color: rgb(1, 6, 109);
     margin-bottom: 0px;
     margin-top: 140px;
@@ -39,11 +39,11 @@ h3{
     width: 370px;
     text-align: left;
     align-self: center;
-    height: 180px;
+    height: 155px;
     border-radius: 15px;
     gap: 50px;
+    border: solid rgb(245, 241, 241) 2px;
     background: linear-gradient(#b4bbff, #4684ff);
-    border: solid rgb(245, 241, 241) 1px;
     margin-bottom: 20px;
     align-content: center;
     align-items: center;
@@ -109,5 +109,5 @@ footer{
     transform: translateY(-12px) scale(1.02);
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2),
                 0 0 0 3px rgba(255, 255, 255, 0.5),
-                0 0 0 6px #7cff62;
+                0 0 0 6px #b4ffa5;
 }
