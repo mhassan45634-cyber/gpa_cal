@@ -46,6 +46,9 @@
     margin-left: auto;
     margin-right: auto;
     }
+    h6{
+      font-size: 1.3rem;  
+    }
 }
 @media screen and (max-width: 360px) {
 
@@ -60,12 +63,12 @@
         margin: 0 auto; 
         margin-top: 45px;
         gap: 10px;
-        height: 410px;
+        height: 450px;
     }
     .gpa, .cgpa, .contact, .grading{
         border: solid rgb(245, 241, 241) 2px;
-        width: 290px;
-        max-height: 100px !important;
+        width: 310px;
+        max-height: 150px !important;
     }
     h2{
         font-size: 1.3rem;
@@ -84,5 +87,8 @@
     }
     .logo{
         left: 102px;
+    }
+    h6{
+        font-size: 1.2rem;
     }
 }
